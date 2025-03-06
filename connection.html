@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Experience</h1>
+        <p>Engage with the images at your own pace while listening to the accompanying audio.</p>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div id="image-container"></div>
+    </div>
+
+    <script>
+        const folder = "./"; // Change to your folder name
+        const imageNames = [
+            "01.png", "02.png", "art1.jpeg", "03.png", "art2.jpeg","04.png", "art3.jpeg", "05.png", "art4.jpeg", "06.png", "07.png", "08.png", "09.png", "10.png",
+            "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png", "19.png", "20.png",
+            "21.png", "22.png", "23.png", "24.png", "25.png", "26.png", "27.png", "28.png", "29.png", "30.png",
+            "31.png", "32.png", "33.png", "34.png", "35.png", "36.png", "37.png", "38.png", "39.png", "40.png",
+            "41.png", "42.png", "43.png", "44.png", "45.png", "46.png"
+        ];
+        
+        const container = document.getElementById("image-container");
+        imageNames.forEach(name => {
+            const img = document.createElement("img");
+            img.src = folder + name;
+            img.alt = "Experience Image";
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
+
